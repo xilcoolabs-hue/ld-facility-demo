@@ -1,0 +1,12 @@
+import express from 'express';
+import path from 'node:path';
+import handler from './api/router.js';
+const app=express();
+app.disable('x-powered-by');
+app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'strict-origin-when-cross-origin','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https:; connect-src 'self'; font-src 'self' data:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"});next();});
+app.use(express.json({limit:'4200kb'}));
+app.use((req,res,next)=>{if(req.path.startsWith('/api/'))return handler(req,res);next();});
+app.use('/admin',(req,res,next)=>{res.set({'Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'});next();});
+app.use(express.static(path.resolve('public')));
+app.use((err,req,res,next)=>res.status(err.status===413?413:400).json({error:err.status===413?'Image is too large.':'Invalid request.'}));
+app.listen(Number(process.env.PORT||3000),'0.0.0.0',()=>console.log('LDC web and API server started.'));

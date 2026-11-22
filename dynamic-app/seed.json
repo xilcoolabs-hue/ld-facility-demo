@@ -1,0 +1,90 @@
+{
+  "services": [
+    {
+      "title": "Strata Maintenance",
+      "description": "Complete garden and grounds care for shared residential properties.",
+      "details": "",
+      "image_url": "/images/strata-grounds-maintenance.jpg",
+      "alt": "Team maintaining shared gardens and lawns at a residential property",
+      "sort_order": 0,
+      "active": true
+    },
+    {
+      "title": "Strata Building Maintenance",
+      "description": "Professional cleaning and maintenance for shared building spaces.",
+      "details": "",
+      "image_url": "/images/strata.jpg",
+      "alt": "Professional team cleaning a shared building lobby",
+      "sort_order": 1,
+      "active": true
+    },
+    {
+      "title": "Lawn Mowing",
+      "description": "Professional lawn mowing and edging for a neat, healthy lawn.",
+      "details": "",
+      "image_url": "/images/lawn-mowing.jpg",
+      "alt": "Lawn mower on a freshly maintained green lawn",
+      "sort_order": 2,
+      "active": true
+    },
+    {
+      "title": "Whipper Snipper",
+      "description": "Grass trimming around trees, fences and hard-to-reach areas.",
+      "details": "",
+      "image_url": "/images/whipper-snipping.jpg",
+      "alt": "Gardener trimming grass with a wheeled whipper snipper",
+      "sort_order": 3,
+      "active": true
+    },
+    {
+      "title": "Trimming Plant",
+      "description": "Careful plant and hedge trimming for a neat, healthy and well-shaped garden.",
+      "details": "",
+      "image_url": "/images/trimming-plant.jpg",
+      "alt": "Green garden planting",
+      "sort_order": 4,
+      "active": true
+    },
+    {
+      "title": "Weeding",
+      "description": "Targeted weed control to keep garden beds and paved areas tidy.",
+      "details": "",
+      "image_url": "/images/weeding.jpg",
+      "alt": "Spraying weeds growing between garden paving stones",
+      "sort_order": 5,
+      "active": true
+    },
+    {
+      "title": "Strata Maintenance",
+      "description": "Reliable cleaning and ongoing care for shared corridors and common areas.",
+      "details": "",
+      "image_url": "/images/strata-maintenance.jpg",
+      "alt": "Professional cleaner vacuuming a shared building corridor",
+      "sort_order": 6,
+      "active": true
+    },
+    {
+      "title": "Hedges",
+      "description": "Regular hedge trimming and shaping for neat, healthy garden boundaries.",
+      "details": "",
+      "image_url": "/images/hedges.jpg",
+      "alt": "Gardener maintaining lawn borders beside a garden path",
+      "sort_order": 7,
+      "active": true
+    }
+  ],
+  "settings": {
+    "business_name": "LDC Facility Management",
+    "phones": [
+      "0435 281 710",
+      "0435 979 876"
+    ],
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "hero_title": "Beautiful outdoors. Better every day.",
+    "hero_text": "Thoughtful garden care and dependable strata maintenance. Making your space a place to be proud of.",
+    "hero_image": "/images/landscape.jpg",
+    "about_image": "/images/strata-grounds-maintenance.jpg"
+  }
+}
