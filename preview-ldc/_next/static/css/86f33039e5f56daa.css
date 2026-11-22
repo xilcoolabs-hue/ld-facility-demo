@@ -3,3 +3,5 @@
 .brand{flex-shrink:0}.brand .brand-logo{display:block;width:230px;height:auto;max-width:100%;object-fit:contain;background:#fff;border-radius:4px}.footer-grid .brand{display:inline-flex}.footer-grid .brand .brand-logo{width:250px}@media(max-width:767px){.brand .brand-logo{width:180px}}@media(max-width:380px){.brand .brand-logo{width:150px}}
 
 .social-contact{display:flex;flex-direction:column;gap:10px;margin-top:16px}.social-contact>a{color:inherit;font-size:14px;text-decoration:underline;text-underline-offset:3px}.social-pending{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;opacity:.75}
+
+.social-quick-links{display:flex!important;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 24px;padding:14px 18px;background:#edf7ef;color:#163e2b;font-size:14px;line-height:1.5;border-bottom:1px solid #d3e6d7}.social-quick-links a{display:inline-block!important;font-weight:700;text-decoration:underline;text-underline-offset:3px;color:#126b39}.social-quick-links span{display:inline-block!important}@media(max-width:600px){.social-quick-links{gap:8px 16px;font-size:14px}.social-quick-links a{flex-basis:100%;text-align:center}}
