@@ -1,0 +1,21 @@
+{
+  "name": "ldc-enquiries-admin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node dev-server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check api/router.js && node --check public/site.js && node --check public/admin.js",
+    "build": "node scripts/build.js",
+    "start": "node dev-server.js",
+    "start:hostinger": "node hostinger-server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "nodemailer": "^10.6.1"
+  }
+}

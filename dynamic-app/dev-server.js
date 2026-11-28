@@ -1,0 +1,6 @@
+import http from 'node:http';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import handler from './api/router.js';
+const root=path.resolve('public');const types={'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.webp':'image/webp'};
+http.createServer(async(req,res)=>{try{const u=new URL(req.url,'http://localhost');if(u.pathname.startsWith('/api/'))return handler(req,res);let pathname=decodeURIComponent(u.pathname);if(pathname==='/book-a-service'||pathname.startsWith('/book-a-service/')){res.writeHead(302,{Location:'/enquiry/index.html'+u.search});return res.end();}let target=path.resolve(root,'.'+pathname);if(!target.startsWith(root+path.sep)&&target!==root){res.writeHead(403);return res.end();}let stat;try{stat=await fs.stat(target)}catch{res.writeHead(404);return res.end('Not found');}if(stat.isDirectory())target=path.join(target,'index.html');res.writeHead(200,{'Content-Type':types[path.extname(target)]||'application/octet-stream','X-Content-Type-Options':'nosniff'});res.end(await fs.readFile(target));}catch{res.writeHead(500);res.end('Server error');}}).listen(Number(process.env.PORT||3000),'0.0.0.0',()=>console.log('LDC running on http://localhost:'+String(process.env.PORT||3000)));
